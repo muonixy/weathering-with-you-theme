@@ -62,7 +62,7 @@ WEB期末/
 ### 方式一：本地打开
 1. 下载或克隆本项目到本地  
    ```bash
-   git clone https://github.com/muonixy/天气之子主题展示网页.git
+   git@github.com:muonixy/weathering-with-you-theme.git
    ```
 2. 打开项目文件夹  
 3. 双击 `index.html` 文件即可在浏览器中查看网页
@@ -70,7 +70,7 @@ WEB期末/
 ### 方式二：在线预览（推荐）
 > 如果你计划使用 **GitHub Pages** 部署，可在部署后访问：  
 > ```
-> https://muonixy.github.io/天气之子主题展示网页/
+> https://muonixy.github.io/weathering-with-you-theme/
 > ```
 
 ---
