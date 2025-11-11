@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐鉴赏</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles/styles5.css">
+</head>
+<body>
+    <!-- 添加视频背景 -->
+    <video autoplay muted loop class="video-background">
+        <source src="./video/近景 雨水滴在室内的小坑里.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <div class="shell">
+        <input type="radio" name="music" id="item-1" checked>
+        <input type="radio" name="music" id="item-2">
+        <input type="radio" name="music" id="item-3">
+        
+        <audio id="audio-1" preload="auto">
+            <source src="./music/愛にできることはまだあるかい.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-2" preload="auto">
+            <source src="./music/グランドエスケープ.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="audio-3" preload="auto">
+            <source src="./music/大丈夫.mp3" type="audio/mpeg">
+        </audio>
+        
+        <div class="cards">
+            <label class="card" for="item-1" id="song-1">
+                <img src="imgs/宣传图.webp">
+            </label>
+            <label class="card" for="item-2" id="song-2">
+                <img src="imgs/10.webp">
+            </label>
+            <label class="card" for="item-3" id="song-3">
+                <img src="imgs/14.webp">
+            </label>
+        </div>
+
+        <div class="player">
+            <div class="information">
+                <div>
+                    <img src="./imgs/play.png" class="play-btn" style="width:40px;margin-top: 5px;">
+                </div>
+                <div class="info-area" id="test">
+                    <label class="song-info" id="song-info-1">
+                        <div class="title">愛にできることはまだあるかい</div>
+                        <div class="Subheading">
+                            <div class="singer">RADWIMPS</div>
+                            <div class="time">0:00 / 6:54</div>
+                        </div>
+                    </label>
+                    <label class="song-info" id="song-info-2">
+                        <div class="title">グランドエスケープ </div>
+                        <div class="Subheading">
+                            <div class="singer">三浦透子</div>
+                            <div class="time">0:00 / 3:08</div>
+                        </div>
+                    </label>
+                    <label class="song-info" id="song-info-3">
+                        <div class="title">大丈夫</div>
+                        <div class="Subheading">
+                            <div class="singer">RADWIMPS</div>
+                            <div class="time">0:00 / 5:35</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <span class="progress"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/scripts4.js"></script>
+</body>
+</html>

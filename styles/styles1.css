@@ -1,0 +1,70 @@
+/* 启动页样式 */
+
+/* 背景图片 */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/封面.jpg'); /* 背景图路径 */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.8); /* 调整背景亮度以突出前景内容 */
+}
+
+/* 内容层居中 */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    display: flex; /* 使用 Flexbox */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+}
+
+/* LOGO 样式 */
+.logo {
+    display: flex;
+    align-items: flex-end;  /* 将logo容器对齐到底部 */
+    padding-bottom: 8px;    /* 微调底部位置 */
+    margin-bottom: 50px;  /* 添加这行，在logo下方增加间距 */
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+    margin-bottom: 2%;    /* 给图片添加一点底部边距 */
+}
+
+/* 按钮样式 */
+#enter-button {
+    margin-top: 50px;  /* 添加这行，增加按钮的上边距 */
+    background-color: #b5dbf1; /* 设置按钮的背景色 */
+    color: white; /* 按钮文字颜色 */
+    font-size: 18px; /* 设置按钮字体大小 */
+    padding: 15px 30px; /* 设置按钮的内边距 */
+    border: none; /* 移除默认的边框 */
+    border-radius: 30px; /* 设置按钮圆角 */
+    cursor: pointer; /* 设置鼠标悬停时显示为手形 */
+    transition: background-color 0.3s, transform 0.2s; /* 按钮过渡效果 */
+}
+
+/* 鼠标悬停时按钮效果 */
+#enter-button:hover {
+    background-color: #aedba9; /* 鼠标悬停时的背景色 */
+    transform: translateY(-3px); /* 鼠标悬停时按钮轻微上移 */
+}
+
+/* 鼠标按下时按钮效果 */
+#enter-button:active {
+    background-color: #baf8cf; /* 按钮点击时的背景色 */
+    transform: translateY(1px); /* 点击时按钮下沉 */
+}
+

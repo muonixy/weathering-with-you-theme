@@ -1,0 +1,224 @@
+/* 启动页样式 */
+
+/* 背景图片 */
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imgs/封面.jpg'); /* 背景图路径 */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(0.8); /* 调整背景亮度以突出前景内容 */
+}
+
+/* 内容层居中 */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    display: flex; /* 使用 Flexbox */
+    flex-direction: column; /* 垂直排列 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+}
+
+/* LOGO 样式 */
+.logo {
+    display: flex;
+    align-items: flex-end;  /* 将logo容器对齐到底部 */
+    padding-bottom: 8px;    /* 微调底部位置 */
+    margin-bottom: 50px;  /* 添加这行，在logo下方增加间距 */
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+    margin-bottom: 2%;    /* 给图片添加一点底部边距 */
+}
+
+/* 按钮样式 */
+#enter-button {
+    margin-top: 50px;  /* 添加这行，增加按钮的上边距 */
+    background-color: #b5dbf1; /* 设置按钮的背景色 */
+    color: white; /* 按钮文字颜色 */
+    font-size: 18px; /* 设置按钮字体大小 */
+    padding: 15px 30px; /* 设置按钮的内边距 */
+    border: none; /* 移除默认的边框 */
+    border-radius: 30px; /* 设置按钮圆角 */
+    cursor: pointer; /* 设置鼠标悬停时显示为手形 */
+    transition: background-color 0.3s, transform 0.2s; /* 按钮过渡效果 */
+}
+
+/* 鼠标悬停时按钮效果 */
+#enter-button:hover {
+    background-color: #aedba9; /* 鼠标悬停时的背景色 */
+    transform: translateY(-3px); /* 鼠标悬停时按钮轻微上移 */
+}
+
+/* 鼠标按下时按钮效果 */
+#enter-button:active {
+    background-color: #baf8cf; /* 按钮点击时的背景色 */
+    transform: translateY(1px); /* 点击时按钮下沉 */
+}
+
+/* 主页 */
+
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 35px;
+    border-bottom: 1px solid #b5dbf1;  /* 添加浅蓝色下边框 */
+    box-shadow: none;  /* 移除原来的阴影效果 */
+}
+
+.logo img {
+    height: 30px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00a8ff;
+}
+
+/* 为了防止导航栏遮挡内容 */
+body {
+    padding-top: 45px;
+    margin: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 主要容器布局 */
+.main-container {
+    display: flex;
+    min-height: calc(100vh - 45px); /* 减去导航栏的高度 */
+    margin-top: 10px; /* 与导航栏保持一定距离 */
+}
+
+/* 左侧图片边栏 */
+.video-sidebar {
+    width: 25%;
+    position: fixed;
+    left: 0;
+    top: 45px;
+    bottom: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* 右侧主要内容区域 */
+.main-content {
+    flex: 1;
+    margin-left: 25%;
+    padding: 10px 20px 20px 40px;  /* 减小顶部内边距到10px */
+    box-sizing: border-box;
+}
+
+/* Story标题样式 */
+.story h2 {
+    color: #62eff7;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 0%;  /* 将左内边距从10%减少到0% */
+}
+
+/* Story内容区域样式 */
+.story .inner {
+    text-align: center;
+    margin-top: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.story figure {
+    margin: 0 auto;
+    width: 100%;      /* 使用100%宽度，因为父元素已经是80%了 */
+}
+
+.story figure img {
+    width: 100%;
+    height: auto;
+}
+
+.story p {
+    text-align: center;  /* 文字居中 */
+    margin: 10px 0;     /* 调整段落间距 */
+}
+
+.story br {
+    display: block;
+    margin: 5px 0;      /* 调整换行间距 */
+}
+
+/* 视频容器样式 */
+.video-container {
+    width: 100%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 8px;  /* 可选：添加圆角 */
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* #剧情介绍页 */
+
+/* 剧情介绍页样式 */

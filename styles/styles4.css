@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: url('../imgs/1.jpg') center/cover fixed;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.subtitle {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.card {
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+.card.active {
+    opacity: 1;
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card.reverse {
+    flex-direction: row-reverse;
+}
+
+.card img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.card.active img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    flex: 1;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.card.active .card-content {
+    opacity: 1;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card-content p {
+    line-height: 1.8;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .card {
+        flex-direction: column;
+        text-align: center;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .card.reverse {
+        flex-direction: column;
+    }
+    
+    .card img {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .card-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .card-content p {
+        font-size: 1rem;
+    }
+}
