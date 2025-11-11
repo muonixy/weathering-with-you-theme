@@ -79,7 +79,8 @@ WEB期末/
 > 以下为网站部分页面示例（上传到 GitHub 后在此插入截图）
 
 ```
-![首页预览](screenshots/home.png)
+![首页预览]
+<img width="3198" height="1856" alt="image" src="https://github.com/user-attachments/assets/dee7b186-02cc-4242-8280-8b7171848847" />
 ![角色介绍](screenshots/characters.png)
 ![音乐页面](screenshots/music.png)
 ```
